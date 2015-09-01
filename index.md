@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Sana Mobile - User and Technical Documentation
+layout: home
+title: Sana Documentation
 home: true
 ---
 # Sana User and Technical Documentation
@@ -12,7 +12,7 @@ data. When fully installed and configured, the tools provide an
 end-to-end system connecting remote healthcare workers to physicians, 
 and managing medical data.
 
-![Platform Overview](/images/platform.png)
+![Platform Overview](/static/images/platform.png)
 
 ## Features
 Key Features of the platform include:
