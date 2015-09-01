@@ -1,0 +1,4 @@
+[submodule "_openmrs"]
+	path = _openmrs
+	url = https://github.com/SanaMobile/sana.openmrs.git
+	branch = gh-pages
