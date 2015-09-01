@@ -2,3 +2,11 @@
 	path = _openmrs
 	url = https://github.com/SanaMobile/sana.openmrs.git
 	branch = gh-pages
+[submodule "_mobile"]
+	path = _mobile
+	url = https://github.com/SanaMobile/sana.mobile.git
+	branch = gh-pages
+[submodule "_mds"]
+	path = _mds
+	url = https://github.com/SanaMobile/sana.mds.git
+	branch = gh-pages
