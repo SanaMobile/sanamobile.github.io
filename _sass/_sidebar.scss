@@ -1,3 +1,7 @@
+$sidebar-title-color: #ffffff;
+$sidebar-navigation-title-color: #ffffff;
+$sidebar-navigation-subpage-color: #cfcfcf;
+
 /*
  * Sidebar
  */
@@ -103,6 +107,11 @@
 .navigation ul li a:focus {
   color: #05bed5;
 }
+
+.navigation ul li ul li a:hover,
+.navigation ul li ul li a:focus {
+  color: #05bed5;
+}
 .navigation ul li ul li a {
   padding: 5px 30px 5px 35px;
   font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -113,4 +122,93 @@
 .navigation ul li ul li a:hover,
 .navigation ul li ul li a:focus {
   color: #05bed5;
+}
+
+/*
+ * Sidebar sub navigation
+ */
+.navigation ul li a.site-link {
+    color: $sidebar-navigation-title-color;
+    line-height: $base-line-height;
+    text-decoration: none;
+    font-size: 1.4em;
+
+     // Gaps between nav items, but not on the first one
+     &:not(:first-child) {
+          margin-left: 20px;
+     }
+}
+.navigation ul li a.page-link {
+    color: $sidebar-navigation-title-color;
+    line-height: $base-line-height;
+    text-decoration: none;
+    font-size: 1.2em;
+
+     // Gaps between nav items, but not on the first one
+     &:not(:first-child) {
+          margin-left: 20px;
+     }
+}
+.navigation ul li a.project-link {
+    color: $sidebar-navigation-title-color;
+    line-height: $base-line-height;
+    text-decoration: none;
+    font-size: 1.2em;
+
+     // Gaps between nav items, but not on the first one
+     &:not(:first-child) {
+          margin-left: 32px;
+     }
+}
+.navigation ul li a.sidebar-navigation-title{
+  margin: 0;
+  padding: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: $sidebar-navigation-title-color;
+  text-decoration: none;
+}
+
+.navigation ul li nav.sidebar-navigation {
+  margin: 0;
+  padding: 0;
+  display: none; 
+  -webkit-transform: translateX(-270px);
+  -ms-transform: translateX(-270px);
+  transform: translateX(-270px);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+.navigation ul li nav.sidebar-navigation.open {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+.navigation ul li nav.sidebar-navigation li a.subpage-link{
+    color: $sidebar-navigation-subpage-color;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the first one
+    &:not(:first-child) {
+        margin-left: 20px;
+    }
+}
+.navigation ul li ul li a.subpage-link:hover,
+.navigation ul li ul li a.subpage-link:focus {
+  color: #05bed5;
+}
+
+.height-transition {
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
+    overflow-y: hidden;            
+}
+.height-transition-hidden {            
+    max-height: 0;            
 }
