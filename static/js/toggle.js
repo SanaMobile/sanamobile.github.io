@@ -37,4 +37,24 @@ $(document).ready(function () {
 		sidebar.toggleClass('open');
 		content.toggleClass('open');
 	}
+
+        // Set the side bar toggles
+        var toggleWrappers = $('.toggle-wrapper');
+        // loop over toggles
+        toggleWrappers.each(function(){
+            var wrapper = $(this);
+            // Sets the click function to 
+            $(this).hover(function(event) {
+                //event.preventDefault();
+                var menu = $(this).children('.toggle-menu').first();
+                if (menu.hasClass("height-transition-hidden"))
+                    menu.slideDownTransition();
+                else
+                    menu.slideUpTransition();
+              },function(event) {
+                    var menu = $(this).children('.toggle-menu').first();
+                    menu.slideUpTransition();
+              });
+        });
+
 });
