@@ -7,9 +7,30 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sanamobile.github.io" # the base hostname & protocol for your site
 # twitter_username: ""
 github_username:  "sanamobile"
+defaults:
+  -
+    scope:
+      path: "" 
+# an empty string here means all files in the project
+    values:
+      layout: "default"
+
 collections:
+    developers:
+        permalink: /developers/:path/
+        output: true
     users:
-      output: true
+        permalink: /users/:path/
+        output: true
+    sana.mds:
+        permalink: /sana.mds/:path/
+        output: true
+    sana.mobile:
+        permalink: /sana.mobile/:path/
+        output: true
+    sana.openmrs:
+        permalink: /sana.openmrs/:path/
+        output: true
 
 # Build settings
 markdown: kramdown
