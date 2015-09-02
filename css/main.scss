@@ -27,9 +27,6 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-// Custom header colors
-$header-color: #E24B4B;
-
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -44,6 +41,9 @@ $header-color: #E24B4B;
 }
 
 
+// Header
+$header-color: #E24B4B;
+$header-spacing:   64px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
