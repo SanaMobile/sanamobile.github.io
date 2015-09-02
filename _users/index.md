@@ -1,7 +1,6 @@
 ---
 layout: default
-title: User Guide 2
-collection: users
+title: User Guide
 ---
 # User Documentation
 
