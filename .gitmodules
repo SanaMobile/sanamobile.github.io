@@ -1,12 +1,12 @@
 [submodule "_openmrs"]
-	path = _openmrs
+	path = _sana.openmrs
 	url = https://github.com/SanaMobile/sana.openmrs.git
 	branch = gh-pages
 [submodule "_mobile"]
-	path = _mobile
+	path = _sana.mobile
 	url = https://github.com/SanaMobile/sana.mobile.git
 	branch = gh-pages
 [submodule "_mds"]
-	path = _mds
+	path = _sana.mds
 	url = https://github.com/SanaMobile/sana.mds.git
 	branch = gh-pages
