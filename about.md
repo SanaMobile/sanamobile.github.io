@@ -55,6 +55,12 @@ the 2.0 versions.
     ln -sf /usr/bin/ruby2.0 /usr/bin/ruby
     ln -sf /usr/bin/gem2.0 /usr/bin/gem
 
+### Updating submodules
+After you have cloned this repository, you should peridodically run
+
+    git submodule foreach git pull origin gh-pages
+    git submodule update --init
+
 ### Install Reference.
 [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/)
 
