@@ -1,35 +1,29 @@
 # Site settings
 title: "Sana"
 email: "questions@sanamobile.org"
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   Sana platform user and technical documentation.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: ""
 url: "http://sanamobile.github.io" # the base hostname & protocol for your site
 # twitter_username: ""
 github_username:  "sanamobile"
+
 defaults:
-  -
-    scope:
+  - scope:
       path: "" 
-# an empty string here means all files in the project
     values:
       layout: "default"
 
 collections:
-    developers:
-        permalink: /developers/:path/
-        output: true
     users:
+        name: User Guide
+        root: /users
         permalink: /users/:path/
         output: true
-    sana.mds:
-        permalink: /sana.mds/:path/
-        output: true
-    sana.mobile:
-        permalink: /sana.mobile/:path/
-        output: true
-    sana.openmrs:
-        permalink: /sana.openmrs/:path/
+    developers:
+        name: "Developer Guide"
+        root: /developers
+        permalink: /developers/:path/
         output: true
 
 # Build settings
