@@ -44,6 +44,8 @@ $on-laptop:        800px;
 // Header
 $header-color: #E24B4B;
 $header-spacing:   64px;
+$header-site-title-float: right;
+$header-nav-float: left;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
