@@ -1,0 +1,167 @@
+<h2>
+<a id="user-content-authentication" class="anchor" href="#authentication"><span class="octicon octicon-link"></span></a>Authentication</h2>
+
+<p>The dispatch server will accept basic authentication for requests.</p>
+
+<h2>
+<a id="user-content-response-format" class="anchor" href="#response-format"><span class="octicon octicon-link"></span></a>Response format</h2>
+
+<p>Responses must return a JSON object with <code>status</code>, <code>code</code>, and <code>message</code> fields and an optional <code>errors</code> in the case failure.</p>
+
+<ul class="task-list">
+<li>
+<code>status</code> - A string displaying <strong>SUCCESS</strong> or <strong>FAILURE</strong>
+</li>
+<li>
+<code>code</code> - An int value similar to http response code but with additional options.</li>
+<li>
+<code>message</code> - An array containing either a list of zero or more objects on success or list of one or more exception messages.</li>
+</ul>
+
+<h3>
+<a id="user-content-successful-response" class="anchor" href="#successful-response"><span class="octicon octicon-link"></span></a>Successful Response</h3>
+
+<p><code>{ "status": "SUCCESS", "code": 200, "message": [] }</code>
+<br>A successful response will normally return a code of 200</p>
+
+<h3>
+<a id="user-content-failure-response" class="anchor" href="#failure-response"><span class="octicon octicon-link"></span></a>Failure Response</h3>
+
+<p><code>{ "status": "FAIL", "code": 400, "message": [] }</code>
+<br>A failure response will have a code value greater than or equal to 400.</p>
+
+<h2>
+<a id="user-content-request-methods" class="anchor" href="#request-methods"><span class="octicon octicon-link"></span></a>Request Methods</h2>
+
+<p>All resources will accept GET, POST, and PUT request methods. DELETE methods are not available. Objects should be updated as 'voided' instead. The only exception is the session resource which accepts POST and DELETE only.</p>
+
+<h2>
+<a id="user-content-uuid-uri-param" class="anchor" href="#uuid-uri-param"><span class="octicon octicon-link"></span></a>UUID Uri param</h2>
+
+<p>The UUID value is optional for GET requests and not allowed for POST requests.</p>
+
+<h2>
+<a id="user-content-uri-templates-and-fields" class="anchor" href="#uri-templates-and-fields"><span class="octicon octicon-link"></span></a>URI Templates and Fields</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Resource</th>
+<th align="left">Uri</th>
+<th align="left">Methods</th>
+<th>Fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Session</td>
+<td align="left">core/session/</td>
+<td align="left">POST<br>DELETE</td>
+<td>username<br>password<br>
+</td>
+</tr>
+<tr>
+<td align="left">Concept</td>
+<td align="left">core/concept/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>name<br>display_name<br>description<br>conceptclass<br>datatype<br>mimetype<br>constraint</td>
+</tr>
+<tr>
+<td align="left">Device</td>
+<td align="left">core/device/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>name</td>
+</tr>
+<tr>
+<td align="left">Encounter</td>
+<td align="left">core/encounter/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>procedure<br>observer<br>device<br>subject<br>concept</td>
+</tr>
+<tr>
+<td align="left">Event</td>
+<td align="left">core/event/{uuid}</td>
+<td align="left">GET<br>POST</td>
+<td>uuid<br>created<br>modified<br>voided<br>client<br>path<br>level<br>messages<br>duration<br>timestamp<br>message</td>
+</tr>
+<tr>
+<td align="left">Instruction</td>
+<td align="left">core/instruction/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>concept<br>predicate<br>algorithm</td>
+</tr>
+<tr>
+<td align="left">Location</td>
+<td align="left">core/location/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>name</td>
+</tr>
+<tr>
+<td align="left">Observation</td>
+<td align="left">core/observation/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>encounter<br>node<br>concept<br>value_text<br>value_complex</td>
+</tr>
+<tr>
+<td align="left">Observer</td>
+<td align="left">core/observer/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>user</td>
+</tr>
+<tr>
+<td align="left">Procedure</td>
+<td align="left">core/procedure/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>title<br>author<br>description<br>version<br>src</td>
+</tr>
+<tr>
+<td align="left">Subject</td>
+<td align="left">core/subject/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>given_name<br>family_name<br>dob<br>gender<br>image<br>location<br>system_id</td>
+</tr>
+<tr>
+<td align="left">Encounter Task</td>
+<td align="left">tasks/encountertask/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>assigned_to<br>status<br>due_on<br>started<br>completed<br>concept<br>voided<br>subject<br>procedure<br>encounter</td>
+</tr>
+<tr>
+<td align="left">Observation Task</td>
+<td align="left">tasks/observationtask/{uuid}</td>
+<td align="left">GET<br>POST<br>PUT</td>
+<td>uuid<br>created<br>modified<br>voided<br>assigned_to<br>status<br>due_on<br>started<br>completed<br>concept<br>voided<br>subject<br>instruction<br>encounter</td>
+</tr>
+</tbody>
+</table>
+<h2>
+<a id="user-content-testing" class="anchor" href="#testing"><span class="octicon octicon-link"></span></a>Testing</h2>
+
+<p>Requests can be sent to the server using any REST client, either as a browser plugin or from a command line.</p>
+
+<h3>
+<a id="user-content-command-line---curl" class="anchor" href="#command-line---curl"><span class="octicon octicon-link"></span></a>Command Line - Curl</h3>
+
+<ul class="task-list">
+<li>Example GET to localhost:<br><code>curl --basic admin:Sanamobile1 -H "Accpt: application/json" http://127.0.0.1:8000/core/concept/</code>
+</li>
+<li>Example POST to localhost:<br><code>curl -H "Accept: application/json" -H "Content-Type: application/json; charset=UTF-8" -X POST -d '{"username":"admin","password":"Sanamobile1"}' http://127.0.0.1:8000/core/session/
+</code>
+</li>
+</ul>
+<h3>
+<a id="user-content-browser-based-client" class="anchor" href="#command-line---curl"><span class="octicon octicon-link"></span></a>Browser Based Client</h3>
+Most major browsers have a REST client plugin. For the Google Chrome browser, we recommend using the <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en">Postman REST Client</a>, available in the Chrome web store. If using Postman, a sample collection may be downloaded here: <a href="http://demo.sana.csail.mit.edu/downloads/mds2/mds2.json">mds2.json</a>
+</li>
+</ul>
+
+<p><br>The example collection will require setting up an environment with following parameters utilized in the request urls.
+<ul>
+<li><code>scheme</code></li>
+<li><code>host</code></li>
+<li><code>port</code> Only needed if using a nonstandard port for http or https traffic. If used, should include ':'-e.g. ':443'</li>
+<li><code>path_prefix</code></li>
+</ul>
+These parameters are used in the request urls as follows:<br />
+<code>{{scheme}}://{{host}}{{port}}/{{path_prefix}}</code></p>
+ 

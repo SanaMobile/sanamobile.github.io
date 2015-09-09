@@ -1,0 +1,146 @@
+<h3>Overview</h3>
+The Sana mobile client provides a programmable workflow that provides decision support, directs remote workers in the collection of data, connection between workers and physicians, and integrates with point of care applications and devices. The mobile client is designed so that it will run on most available Android devices including older and low-end devices that may be more readily available in resource constrained settings.
+
+Decision support and data collection instructions are provided by defining scripts, or Procedures, that are interpreted at run time on the client. Procedures are stored in a simple XML based format that includes branching logic, defines the visual interface that will be presented to the user, and allows third party applications to be integrated into the Procedure. Please see the page on <a title="Defining Custom Procedures" href="http://sana.kidk.net/mobile/documentation/users/mobile/procedures/">Defining Custom Procedures</a> for instructions and complete details of all features.
+
+<hr />
+
+&nbsp;
+<h3>General Usage Instructions</h3>
+<div id="authentication">
+<h4>Authentication</h4>
+The authentication screen will be presented each time the user starts the application. The username and password must be verified before the user will be allowed to continue. <b>Important. </b>The application must validate the user credentials with the server the first time they attempt to access the app. This requires network connectivity. Upon successful validation, the user credentials will be cached on the device such that subsequent logins can occur with or without connectivity.
+
+[screenshot]
+
+<hr />
+
+&nbsp;
+
+</div>
+<div id="main">
+<h4>Main Menu</h4>
+The main menu will present users with options to
+<ul>
+	<li><a title="Mobile Client User Guide" href="http://sana.kidk.net/mobile/documentation/users/mobile/#patients">Manage Patients</a></li>
+	<li><a title="Mobile Client User Guide" href="http://sana.kidk.net/mobile/documentation/users/mobile/#encounters">Manage Encounters</a></li>
+	<li>Run Procedure</li>
+</ul>
+[screenshot]
+<h5>Menu Options</h5>
+[screenshot]
+
+From the <strong>Main</strong> screen, pressing the device <strong>Menu</strong> button will allow users to
+<ul>
+	<li><strong>Reload Database</strong></li>
+	<li>....additional options</li>
+</ul>
+Sections below will detail usage of each function
+
+<hr />
+
+&nbsp;
+
+</div>
+<div id="patients">
+<h4>Manage Patients</h4>
+Managing patients on the mobile client consists of registering new patients and selecting them to run procedures. After registering or selecting a patient, that patient will be considered the current active patient for any procedures to run. This was implemented to allow for running multiple procedures on a single patient without having to select or enter with each procedure. Users will be prompted with a dialog to verify that they wish to run a procedure for subsequent procedures when more than one is run.
+
+[screenshots]
+<h5>Registering a New Patients</h5>
+Registering a patient will walk the user through a series of prompts where the patients demographic information will be entered.
+
+<strong>[screen shot]</strong>
+
+<strong>[options list]</strong>
+<h5>Selecting Existing Patient</h5>
+[screenshot]
+
+Selecting a patient from the list will present the user with a screen displaying a summary of the patient demographic information. The user can then select to confirm selection or return to the list. Confirming the selection will mark the patient as the current active and navigate to the <strong>Main Screen</strong> where the user can opt to <strong>Run Procedure</strong> or <strong>View Prior Encounters</strong> for that <strong>Patient</strong>.
+
+[screenshots]
+
+<hr />
+
+&nbsp;
+
+</div>
+<div id="procedures">
+<h4>Run Procedure</h4>
+Pressing the <strong>Run Procedure</strong> screen will present the user with a list of available procedures to run. The procedures stored on the device and interpreted at run time to present a series of prompts to the end users. Completion of the procedure will create a new <strong>Encounter</strong> object and associated Observations which are stored on the device and uploaded when the network is available.
+
+[screenshots]
+
+For more information on creating your own procedures, please see the <a title="Procedures" href="http://sana.kidk.net/mobile/documentation/users/mobile/procedures/">Defining Custom Procedures</a> page.
+
+<strong>Important note:</strong> Running a procedure requires a patient to have been selected prior to the start of execution. If a patient has not been selected, the user will be taken to the <a title="Mobile Client User Guide" href="http://sana.kidk.net/mobile/documentation/users/mobile/#patients">Manage Patients</a> screen.
+<h5>Menu Options</h5>
+[screenshot]
+
+While running a <strong>Procedure</strong>, pressing the device <strong> Menu</strong> button allows users to
+<ul>
+	<li><strong>Save and Exit</strong> Saves the current state of the <strong>Procedure</strong> such that it can be resumed at a later time.</li>
+	<li><strong>Discard and Exit</strong> Halts the current <strong>Procedure</strong> and discards any collected data.</li>
+	<li><strong>Go to Page</strong> Displays a list of the pages a user can navigate to.</li>
+</ul>
+[screenshot]
+
+<hr />
+
+&nbsp;
+
+</div>
+<div id="encounters">
+<h4>View Prior Encounters</h4>
+Selecting the <strong>View Prior Encounters</strong> button will present the end user with a list of prior encounters for the current selected patient.
+
+[screenshots]
+
+Each <strong>Encounter</strong> displayed will show a brief summary of the encounter including the patient, date and upload status
+<h5>Menu Options</h5>
+[screenshot]
+<ul>
+	<li><strong>Select/Deselect All</strong> Marks all of the items as selected or unselected.</li>
+	<li><strong>Resend</strong> Manually triggers resending selected encounters where the <strong>Procedure</strong> has benn run to completion.</li>
+	<li><strong>Delete</strong> Removes an <strong>Encounter</strong> and <strong>all</strong> related <strong>Observation</strong> data from the device.</li>
+</ul>
+<strong><b>Important: </b></strong>Encounters on the phone which are deleted can not be recovered on the device. Deleting them on the device has no effect on encounters which have been uploaded to the server. Also, the upload process successfully records which procedures have been sent successfully. Pressing resend on any items which have been sent successfully will not result in the sending them to the server again.
+
+Selecting an <strong>Encounter</strong> will either resume or display a summary of the <strong>Observation</strong> data collected during the encounter.
+
+[screenshot]
+
+Pressing on an item where a captured image thumbnail is visible will launch the device's default image viewer application.
+
+[screenshot]
+<h5>Resuming</h5>
+Selecting an Encounter which was collected using a Procedure that was not completed will have the same effect as running the procedure again. Any data previous associated with the <strong>Encounter</strong>, selected patient and observations, will be loaded as well and used to populate the procedure.
+
+<hr />
+
+&nbsp;
+
+</div>
+<div id="Settings">
+<h4>Settings</h4>
+Configuration of the mobile client is done through the <strong>Settings</strong> screens accessible by pressing the <strong>Menu</strong> button on the <a title="Mobile Client User Guide" href="http://sana.kidk.net/mobile/documentation/users/mobile/#main">Main</a> navigation screen.
+<h5>General Settings</h5>
+The <b>General Settings</b> contains links to the topic specific settings pages listed below.
+
+[screen shot]
+
+[options list]
+<h5>Network</h5>
+The network settings allow users to configure the connectivity options for the application.
+
+[screen shot]
+
+[options list]
+<h5>Resources</h5>
+The <strong>Resources</strong> displays a list of functions for managing the <strong>Procedure</strong> content available on the device. To ad a new <strong>Procedure, </strong>the user can select <strong>Load from SD Card</strong>. This will read the devices download directory for valid <strong>Procedure </strong> XML files which can be selected and loaded into the application.
+
+[screen shot]
+
+[options list]
+
+</div>

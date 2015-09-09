@@ -1,0 +1,66 @@
+<div id="overview">
+<h3>Overview</h3>
+This page and linked documents describe installation, configuration, and usage of the Sana platform for end users. A complete system will require installation of the Mobile Client and server components.
+<h4>General Requirements</h4>
+<ol>
+	<li>One or more Android based smartphones with Android version 2.1 or later.</li>
+	<li>Internet access for sartphone(s) - WiFi or cellular data plan</li>
+	<li>Ubuntu 14.04LTS server with a 1 GHz or faster processor and at least 1 GB ram</li>
+</ol>
+Additional details on any prerequisites are provided in the sections below
+
+</div>
+<div id="mobile_client">
+<h3>Mobile Client</h3>
+There are two basic methods for installing the mobile client on an Android based phone. Both require the following:
+<ol>
+	<li>Android based device with Android version 2.1 or later</li>
+	<li>Device configured to allow installation of applications from unknown sources. This option is available by navigating to <strong>Settings → Application.</strong></li>
+</ol>
+<h4>Recommended Method</h4>
+This method only requires the mobile device you wish to install the application on and an internet connection, either mobile or WiFi.
+<ol>
+	<li>Open a web browser on the mobile device.</li>
+	<li>Enter the url of a copy of the mobile application. For example
+<code>  http://demo.sana.csail.mit.edu/android/sana-current.apk </code>
+You should be provided the url by an adminstrator or others who provide support for your deployment if you did not compile the client directly.</li>
+</ol>
+Note: If you have difficulty installing using this method and are certain the url to the application is correct, you may want to consider using an alternative browser. The <a title="Dolphin" href="https://play.google.com/store/apps/details?id=mobi.mgeek.TunnyBrowser">Dolphin</a> web browser available through the Google Play store is free of charge and known to work well when using this installation method.
+<h5>Alternative Method</h5>
+This method will require connecting the device to a PC with a USB cord and possibly an internet connection.
+<ol>
+	<li>Download or copy the application to your PC.</li>
+	<li>Connect the mobile device to the PC using a USB cord.</li>
+	<li>Copy the application to your mobile device.</li>
+	<li>Open a file browser on the mobile device and locate the copied file.</li>
+	<li>Press on the .apk file and you will be prompted to install.</li>
+</ol>
+</div>
+<div id="server">
+<h3>Server Components</h3>
+This section details installation of the server side components using the Ubuntu 14.04 LTS packages provided by Sana. The Sana packages will install any prerequisite software on the server. Sana does not provide support for installation of server components on other linux distributions. If you are interested in doing so, please consult the &lt;link&gt; page for a complete list of prerequisites and manual installation.
+<h4>Installation procedure</h4>
+<ol>
+	<li>Log in to a terminal on your server</li>
+	<li>Add the Sana package repository to the list of sources.
+<code>  sudoedit /etc/apt/sources.list </code>
+Then insert the following line
+<code>  deb http://demo.sana.csail.mit.edu/packages/ubuntu/ sana/ </code></li>
+	<li>Install the Sana packages as follows:
+<code>  apt-get install sana-mds </code></li>
+	<li>Follow the prompts to configure the Sana middlware, MDS</li>
+	<li>Open a web browser to your host-e.g. <code>https://localhost/openmrs</code> to initialize and configure OpenMRS.</li>
+</ol>
+<h5>Troubleshooting</h5>
+</div>
+<div id="packages">
+<h3>Ready-to-deploy Packages...Cming soon</h3>
+The server side components are available as complete, configured Ubuntu 14.04 LTS virtual machine images. We recommend using Virtual Box for general testing and demonstration purposes. For deployment, kvm or any similar vm manager available on your host is recommended. Alternatively, it is possible to install the vm image directly to a hard drive and not require running the image as a guest os. Installation instructions for installing as a guest in VirtualBox are provided below. Sana does not provide support for other approaches.
+<h4>System Requirements</h4>
+We recommend a dedicated processor and 2GB of dedicated RAM for running the appliance.
+<h4>Available Deployment Packages</h4>
+...Coming Soon
+<h4>Installation</h4>
+Please consult the documentation available for your VM manager on how to import the appliance.
+
+</div>

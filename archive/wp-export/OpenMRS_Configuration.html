@@ -1,0 +1,166 @@
+<h2><span id="Add_Demo_Data" class="mw-headline">Add Demo Data</span></h2>
+When doing the initial setup wizard of OpenMRS, in Step 2, add the demo data to the database. This will add the basic form and load in the basic OpenMRS concept dictionary.
+<h2><span id="Add_New_Concepts" class="mw-headline">Add New Concepts</span></h2>
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Creatediagnosis.png"><img src="http://sana.mit.edu/wiki/images/thumb/d/d2/Creatediagnosis.png/600px-Creatediagnosis.png" alt="Creatediagnosis.png" width="600" height="571" /></a>
+
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Pic.png"><img src="http://sana.mit.edu/wiki/images/thumb/3/37/Pic.png/600px-Pic.png" alt="Pic.png" width="600" height="571" /></a>
+
+Add the following concepts. Be careful not to set the wrong properties and note that you cannot delete concepts (only void them). Go to the Dictionary tab and then click "Add New Concept."
+<ol>
+	<li><b>DOCTOR DIAGNOSIS</b>
+Description: Diagnosis for Sana telereferral case
+Class: Question
+Datatype: Text</li>
+	<li><b>DOCTOR URGENCY LEVEL</b>
+Description: Urgency level for Sana telereferral case
+Class: Question
+Datatype: Text</li>
+	<li><b>DOCTOR TREATMENT RECOMMENDATION</b>
+Description: Treatment recommendation for Sana telereferral case
+Class: Question
+Datatype: Text</li>
+	<li><b>DOCTOR COMMENTS</b>
+Description: Comments for Sana telereferral case
+Class: Question
+Datatype: Text</li>
+	<li><b>DOCTOR INFO REQUEST</b>
+Description: More information request for Sana telereferral case before diagnosis can be made
+Class: Question
+Datatype: Text</li>
+	<li><b>PICTURE:</b>
+Description: Image media file for patient encounter
+Class: Misc
+Datatype: Complex
+Handler: ThumbnailImageHandler
+Note: Sana and Media Viewer Modules must be loaded in for these handlers to appear as drop down options</li>
+	<li><b>SOUND:</b>
+Description: Audio media file for patient encounter
+Class: Misc
+Datatype: Complex
+Handler: MediaFileHandler
+Note: Sana and Media Viewer Modules must be loaded in for these handlers to appear as drop down options</li>
+	<li><b>VIDEO:</b>
+Description: Video media file for patient encounter
+Class: Misc
+Datatype: Complex
+Handler: MediaFileHandler
+Note: Sana and Media Viewer Modules must be loaded in for these handlers to appear as drop down options</li>
+</ol>
+At the end of adding all these concepts, search the dictionary for these concepts to ensure that they appear. (Example:<a class="external free" href="http://localhost/openmrs/dictionary/index.htm" rel="nofollow">http://localhost/openmrs/dictionary/index.htm</a>)
+<h2><span id="Add_Basic_Form" class="mw-headline">Add Basic Form</span></h2>
+The Basic Form is used when creating a new patient encounter when Sana cases are uploaded from the phone. When doing the initial setup wizard for OpenMRS, if you didn't select the "Add Demo Data" option, then you won't have the basic form loaded in. Check if you have it loaded in by going to the Administration tab &gt; Forms &gt; Manage Forms.
+
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Manageforms.png"><img src="http://sana.mit.edu/wiki/images/thumb/f/f4/Manageforms.png/600px-Manageforms.png" alt="Manageforms.png" width="600" height="571" /></a>
+
+If you don't have the Basic Form already loaded in, go to "Add Form" and fill it out. Upload new XSLT file by copying the following file located on the MIT Media server (save this to a form.xslt file): <a class="external free" href="https://demo.sana.csail.mit.edu/openmrs/admin/forms/formViewXslt.form?formId=1" rel="nofollow">https://demo.sana.csail.mit.edu/openmrs/admin/forms/formViewXslt.form?formId=1</a>
+
+<strong>Note: </strong>Use <strong>guest</strong>:<strong>Sanamobile1</strong> for credentials when prompted
+<h2><span id="Create_New_Roles_and_Manage_Privileges" class="mw-headline">Create New Roles and Manage Privileges</span></h2>
+Restrict access to certain functionality in OpenMRS (such as permission to view patient records or permission to add a patient encounter) according to the healthcare worker's role. Manage these privileges by going to the Administration tab &gt; Users &gt; Manage Roles. Make sure that the below roles have the specified privileges. If the role doesn't exist already (Specialist and Remote Healthcare Worker), create it by clicking "Add Role" under the Role Management title. Note that the Specialist and Remote Healthcare Worker roles INHERIT privileges from the Provider role.
+
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Createrole.png"><img src="http://sana.mit.edu/wiki/images/thumb/d/d3/Createrole.png/600px-Createrole.png" alt="Createrole.png" width="600" height="571" /></a>
+<h4><span id="Provider" class="mw-headline">Provider</span></h4>
+This is an existing role already, so just modify its privileges.
+<ul>
+	<li>Add Observations</li>
+	<li>Edit Encounters</li>
+	<li>Edit Observations</li>
+	<li>Edit Patients</li>
+	<li>Manage Encounter Queue</li>
+	<li>Patient Dashboard - View Demographics Section</li>
+	<li>Patient Dashboard - View Encounters Section</li>
+	<li>Patient Dashboard - View Forms Section</li>
+	<li>Patient Dashboard - View Graphs Section</li>
+	<li>Patient Dashboard - View Overview Section</li>
+	<li>Patient Dashboard - View Patient Summary</li>
+	<li>Patient Dashboard - View Regimen Section</li>
+	<li>View Concepts</li>
+	<li>View Concept Classes</li>
+	<li>View Concept Datatypes</li>
+	<li>View Concept Sources</li>
+	<li>View Encounters</li>
+	<li>View Encounter Types</li>
+	<li>View Forms</li>
+	<li>View Observations</li>
+	<li>View Navigation Menu</li>
+	<li>View Patient Identifiers</li>
+	<li>View Patients</li>
+	<li>View Person Attribute Types</li>
+	<li>View Privileges</li>
+	<li>View Reports</li>
+	<li>View Roles</li>
+</ul>
+<h4><span id="Remote_Healthcare_Worker" class="mw-headline">Remote Healthcare Worker</span></h4>
+NOTE: Remote Healthcare Worker inherits privileges from the role: Provider
+<ul>
+	<li><em>[depreccated]</em>Access REST API</li>
+	<li>Add People</li>
+	<li>Add Patients</li>
+	<li>Add Encounters</li>
+	<li>Manage Concepts</li>
+	<li>Manage Encounter Queue (to upload a case to the Sana queue)</li>
+</ul>
+<h4><span id="Specialist" class="mw-headline">Specialist</span></h4>
+NOTE: Specialist inherits privileges from the role: Provider
+<ul>
+	<li>View Navigation Bar (to access the menu bar tab to link to the Sana queue)</li>
+	<li>View Sana Queue (to view queue)</li>
+</ul>
+<h4><span id="On-Call_Provider" class="mw-headline">On-Call Provider</span></h4>
+NOTE: Make sure the capitalization is precisely as above, this role doesn't inherit any other role
+<h2><span id="Add_New_Person_Attributes" class="mw-headline">Add New Person Attributes</span></h2>
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Addcontactphone.png"><img src="http://sana.mit.edu/wiki/images/thumb/d/dc/Addcontactphone.png/600px-Addcontactphone.png" alt="Addcontactphone.png" width="600" height="571" /></a>
+<ul>
+	<li>Contact Phone
+Format: java.lang.String
+Description: Phone number for person for Sana notifications</li>
+	<li>Contact Email
+Format: java.lang.String
+Description: Email for person for Sana notifications</li>
+</ul>
+<h4><span id="Issue_with_OpenMRS_User_Attributes_not_displaying" class="mw-headline">Issue with OpenMRS User Attributes not displaying</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a title="Edit section: Issue with OpenMRS User Attributes not displaying" href="http://sana.mit.edu/wiki/index.php?title=OpenMRS_Configuration&amp;action=edit&amp;section=10">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+The additional <b>Person Attributes</b> for the <b>Contact Phone</b> and <b>Contact Email</b> have shown to have some issues displaying in the <b>Admin --&gt; Manage Users</b> page with some of the 1.6 versions of OpenMRS. As a workaround, have each user go into the <b>My Profile --&gt; Notfications</b> page and enter an email address. The return sms number will be the one included with the mobile client's original upload and stored with the entry in the queue. (Note the issue seems to be fixed in more recent versions of OpenMRS. The next release of the Sana module will return to the original behavior utilizing the <b>Person Attributes</b>).
+<h2><span id="Create_New_Users" class="mw-headline">Create New Users</span></h2>
+Because you don't want to give admin privileges out to the doctors who will be using the system, you should create new user accounts for each doctor and healthcare worker. Go to Administration tab &gt; Manage Users &gt; Add User
+<ul>
+	<li>Select Role as Specialist (reviewing cases in Sana queue) or Remote Healthcare Worker (uploading cases to Sana queue)</li>
+	<li>Click "Show Advanced Options"</li>
+	<li>Fill in an email and contact phone number (in the format: 16173334567)</li>
+	<li>On the Sana phone app, in the Settings page, change the OpenMRS username and password to match this new user's credentials</li>
+</ul>
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Newuser.png"><img src="http://sana.mit.edu/wiki/images/thumb/6/6e/Newuser.png/600px-Newuser.png" alt="Newuser.png" width="600" height="571" /></a>
+<h2><span id="To_Receive_Email_Notifications" class="mw-headline">To Receive Email Notifications</span></h2>
+Sana is setup to only send SMS and email notifications when
+<ul>
+	<li>Diagnosis is made by the specialist</li>
+	<li>Retake image request (or request for more information) is made by the specialist</li>
+</ul>
+The SMS will be sent to the phone number from which the case was uploaded.
+
+The email will be sent to the "Contact Email" of the user who uploaded the case (the user being the OpenMRS username specified in the settings on the Sana Android phone app). You can modify the email address by going to Administration tab &gt; Users &gt; Manage Users &gt; click on user you want &gt; click on advanced options (Make sure the contact email attribute has been added, see above directions).
+<h2><span id="Set_Global_Properties_so_OpenMRS_can_point_to_MDS" class="mw-headline">Set Global Properties so OpenMRS can point to MDS</span></h2>
+Make sure that OpenMRS knows which Sana Dispatch Server it is communicating with. On the OpenMRS admin page, under "Maintenance," click on "Manage Global Properties." Scroll down to the following properties and set them to appropriate values according to your Sana Dispatch Server instance. Below are example values for the MIT server.
+
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Globalprops.png"><img src="http://sana.mit.edu/wiki/images/thumb/0/0b/Globalprops.png/600px-Globalprops.png" alt="Globalprops.png" width="600" height="571" /></a>
+<ol>
+	<li><b>sana.mdsUri:</b> Location of the MDS. This site should say "Sanamobile MDS : Online" (Example: <a class="external free" href="http://localhost/mds" rel="nofollow">http://localhost/mds</a>)</li>
+	<li><b>snaa.email_notification_server_url:</b> For email notifications from OpenMRS that get routed through the MDS and out to the recipient according to the email server specified in the MDS settings (Example: <a class="external free" href="http://localhost/mds/notifications/submit/email/" rel="nofollow">http://localhost/mds/notifications/submit/email/</a>)</li>
+	<li><b>sana.notification_server_url:</b> For SMS notifications from OpenMRS that get routed through the MDS and out to the recipient according to the SMS gateway specified in the MDS settings. (Example: <a class="external free" href="http://localhost/mds/notifications/submit/" rel="nofollow">http://localhost/mds/notifications/submit/</a>)</li>
+	<li>The default values for the other properties are fine.</li>
+	<li>Scroll to the bottom of the page and '<b>SAVE'</b> changes.</li>
+</ol>
+<h2><span id="Load_in_a_Medical_Ontology" class="mw-headline">Load in a Medical Ontology</span></h2>
+When a specialist makes a diagnosis for a patient, instead of having them fill in the diagnosis in a free-text box, we wanted to have them select from a set of coded medical terms such as from the SNOMED vocabulary. Hence, the doctor can search for a diagnosis like "pneumonia," see the relevant search results in that medical vocabulary, and select ones to be tagged to the particular patient case. There would still be a "Comments" free text box, in case the specialist wasn't able to find the proper terms to describe the patient's condition.
+
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Diagnosis.png"><img src="http://sana.mit.edu/wiki/images/thumb/6/64/Diagnosis.png/600px-Diagnosis.png" alt="Diagnosis.png" width="600" height="570" /></a>
+
+In order to load in an ontology (such as SNOMED, ICD-10, or others), perform a one-time upload procedure from a csv file of all the coded medical terms into the OpenMRS concept dictionary. To upload the vocabulary, go to the Administration tab &gt; Sana &gt; Manage Medical Vocabularies.
+
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Lexicon.png"><img src="http://sana.mit.edu/wiki/images/thumb/d/db/Lexicon.png/600px-Lexicon.png" alt="Lexicon.png" width="600" height="570" /></a>
+
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Snomedlist.png"><img src="http://sana.mit.edu/wiki/images/thumb/8/8c/Snomedlist.png/600px-Snomedlist.png" alt="Snomedlist.png" width="600" height="571" /></a>
+
+Make sure that you have a csv file of the medical vocabulary.
+For our demo server, we have loaded in the UMLS Enhanced VA/KP Problem List Subset of SNOMED CT, which is about 17,000 terms.  You can obtain a copy of this medical vocabulary list by downloading it here: <a class="external free" href="http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html" rel="nofollow">http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html</a>. You may need to apply for a free license.
+
+&nbsp;

@@ -1,0 +1,27 @@
+<h3>Overview</h3>
+The Sana OpenMRS Encounter queue module is designed to create the storage, management, and visual interface which will allow clinicians to see patient visits that are pending review.
+<h3>System Requirements</h3>
+<ol>
+	<li>Linux based host - We recommend and support <a href="http://www.ubuntu.com/download/server">Ubuntu 14.04 LTS</a>.</li>
+	<li><a title="MDS" href="http://sana.kidk.net/mobile/documentation/developers/middleware/">MDS</a></li>
+	<li><a href="http://git-scm.org/downloads">Git</a></li>
+	<li><a href="https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junosr2">Eclipse Java EE Edition</a></li>
+	<li>Eclipse Maven Plugin - <a href="http://eclipse.org/m2e/">M2E</a></li>
+	<li><a href="http://tomcat.apache.org/download-60.cgi">Apache Tomcat</a> Server</li>
+	<li>OpenMRS, installed and configured as per the <a title="User Guide" href="http://sana.kidk.net/mobile/documentation/users/">User Guide</a></li>
+</ol>
+<h3>Source Code</h3>
+Source code is available on the Sana <a href="https://github.com/SanaMobile/sana.openmrs">GitHub</a> repository.
+
+https://github.com/SanaMobile/sana.openmrs.git
+<h3>Building and Running</h3>
+Import the project into Eclipse using the Maven plugins "Import from SCM" function using the Github url above.
+
+Run the project as maven clean install
+
+Install Apache Tomcat and OpenMRS on your linux based hostDeploy to your OpenMRS installation using the Administration --&gt; Manage Modules page.
+<h3>Additional Information</h3>
+<ol>
+	<li><a href="http://resources.openmrs.org/doc-1.9/">OpenMRS API</a> docs</li>
+	<li><a href="http://demo.sana.csail.mit.edu/docs/openmrs">Sana Encounter Queue API</a> docs</li>
+</ol>

@@ -1,0 +1,29 @@
+<h3>Overview</h3>
+MDS, or mobile dispatch server, is the Sana developed middleware layer designed to act as an intermediary between the Sana mobile client  and an EMR or other backend. The stock MDS source code also includes a lightweight web interface as an alternative backend for storing and accessing data through a web browser. The alternative backend, or standalone MDS, is not intended to be a replacement for a full EMR.
+<h3>System Requirements</h3>
+<ol>
+	<li>Linux Host - We recommend and support <a href="http://www.ubuntu.com/download/server">Ubuntu 14.04 LTS</a>. All additional requirements below are available for installation using the package manager. Additional details for installing manually on an Ubuntu host are available in the doc directory of the source.</li>
+	<li><a href="http://git-scm.com/downloads">Git</a></li>
+	<li><a href="https://www.python.org/download/releases/2.7/">Python 2.7</a></li>
+	<li><a href="https://pypi.python.org/pypi/PIL">PILPython Imaging Library</a></li>
+	<li><a href="https://www.djangoproject.com/download/">Django 1.6</a></li>
+	<li><a href="https://pypi.python.org/pypi/django-piston/0.2.3">django-piston 0.2.3</a></li>
+	<li><a href="https://pypi.python.org/pypi/django-extensions">Django Extensions</a></li>
+	<li><a href="http://lxml.de/" title="Python lxml" target="_blank">python-lxml</a></li>
+	<li><a href="https://pypi.python.org/pypi/libxml2-python" title="libxml2" target="_blank">python-libxml2</a></li>
+	<li><a href="https://pypi.python.org/pypi/python-cjson/1.1.0" title="cjson" target="_blank">python cjson</a></li>
+	<li><a href="https://pypi.python.org/pypi/MySQL-python/1.2.5" title="MySQL-Python" target="_blank">python-mysql</a> and/or other python database connector-e.g. <a href="https://docs.python.org/2/library/sqlite3.html" target="_blank">python-sqlite3</a></li>
+
+</ol>
+<h3>Source Code</h3>
+Source code for MDS is available on <a href="https://github.com/SanaMobile/sana.mds">GitHub</a>.
+
+<code>https://github.com/SanaMobile/sana.mds.git</code>
+<h3>Building</h3>
+No additional build instructions are required.
+<h3>Running</h3>
+Use the standard Django admin functions to run the app as a server, <a href="https://docs.djangoproject.com/en/1.6/ref/django-admin/">django-admin.py</a>. For production use, we recommend running MDS on Apache or other server. Sample Apache conf files are included in the source.  Please consult the Django documentation for more information.
+<h3>Additional Information</h3>
+<ul>
+<li>The MDS REST API documentation is available on this documentation site <a href="http://sana.mit.edu/mobile/documentation/developers/middleware/mds-rest-api/" title="MDS REST API">here</a> or on the <a href="https://github.com/SanaMobile/sana.mds/wiki">MDS Github wiki</a>.</li> 
+<li>PyDocs generated from the source code documentation are available <a href="http://demo.sana.csail.mit.edu/docs/mds">here</a>.</li>

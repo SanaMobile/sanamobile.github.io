@@ -3,21 +3,20 @@ layout: default
 title: User Guide
 ---
 # User Documentation
-
-## Introduction
 This section of the documentation covers installation, configuration, 
 and usage instructions for end users of the platform.  For more detailed
 information on specific topics, please consult the information in the 
 guides or at the quick links below.
 
+
 [Installation]({{ site.baseurl }}/users/installation/)
 
-- [Mobile Client]({{ site.baseurl }}/users/installation/#mobile_client)
-- [Server components]({{ site.baseurl }}/users/installation/#server)
+- [Mobile Client]({{ site.baseurl }}/users/mobile_user_guide/#installation)
+- [Server components]({{ site.baseurl }}/users/server/)
 
 ## Mobile Client
 
-Please consult the [Mobile Client User Guide]({{ site.baseurl }}/users/mobile/)
+Please consult the [Mobile Client User Guide]({{ site.baseurl }}/users/mobile_user_guide/)
 for full details on installation and use of the Sana mobile client.
 
 ### Quick Links
@@ -26,8 +25,8 @@ for full details on installation and use of the Sana mobile client.
 
 
 ## Server Administration
-Please consult the [Server Admin Guide]({{ site.baseurl }}/users/admin/) for full 
-details on installation and use of the Sana mobile client.
+Please consult the [Server Admin Guide]({{ site.baseurl }}/users/server/) for full 
+details on installation and use of the server components.
 
 ### Quick links
 

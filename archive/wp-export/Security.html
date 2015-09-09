@@ -1,0 +1,98 @@
+<h2>Overview</h2>
+This page contains a hints for administering the mobile phones and server system in a secure fashion. Note, this a non-exhaustive list of security issues so we recommend becoming familiar with general best-practice security guidelines as well. A number of resources are available online for this purpose. Please see the "References" at the bottom of the page for suggested material.
+<h2><span id="Phone_Security" class="mw-headline">Phone Security</span></h2>
+<h4><span id="Screen_Locking_Pattern" class="mw-headline">Screen Locking Pattern</span></h4>
+To prevent unauthorized individuals from being able to upload false patient data to OpenMRS, it is strongly recommended to enable the pattern screen unlock option on the Android phone (the feature is off by default). With this feature, if there is no interaction with the phone after several minutes, the screen will automatically lock until the correct user enters their secret pattern in.
+<ol>
+	<li>Go to Home &gt; Menu &gt; Settings</li>
+	<li>Select "Security &amp; Location"</li>
+	<li>Select "Set Unlock Pattern"</li>
+	<li>Follow on-screen instructions to draw an unlock pattern.</li>
+	<li>Back on the "Security &amp; Location" menu, select "Require pattern"</li>
+	<li>Feel free to change the two settings directly beneath that
+<ol>
+	<li>Unselect "Use visible pattern" (to prevent others visibly seeing your unlock pattern)</li>
+	<li>Select "Use tactile feedback" (to make it easier to know if you are entering in the right pattern)</li>
+</ol>
+</li>
+</ol>
+<h4><span id="Preventative_Measures_Against_Mobile_Threats" class="mw-headline">Preventative Measures Against Mobile Threats</span></h4>
+Using cell phones can introduce a whole host of vulnerabilities including mobile specific or Internet viruses, so to take cautionary measures, the healthcare worker should not use the phone for unnecessary web browsing or other uses aside from telemedicine. The healthcare worker should have their own phone for personal calls and uses. Another option to look into is anti-virus software for the phone.
+<h4><span id="Preventing_Theft" class="mw-headline">Preventing Theft</span></h4>
+Because these Android phones are expensive (on the order of hundreds of dollars), be cautious about protecting the devices from theft. Lock them in a secure place after use and do not leave them out in public view.
+
+Keep an inventory of phones so you know which healthcare workers have which phone (note down the serial number of the phone and when they received it), so that each worker is responsible and liable for their phone.
+<h2><span id="Computer_Security" class="mw-headline">Computer Security</span></h2>
+<h4><span id="Screen_Timeout_Password" class="mw-headline">Screen Timeout Password</span></h4>
+Ensure that the computer has the password-protected time-out functionality turned on.
+<h4><span id="Email_Encryption" class="mw-headline">Email Encryption</span></h4>
+Sana has the ability to notify healthcare providers by email about new cases and the resulting diagnoses. Ideally there shouldn't be any personal health information being transmitted using email because it isn't secure and doesn't allow for organized tracking of patient's health over long periods of time. If email is necessary for notification purposes, then be sure to turn on the SSL encryption setting on.
+
+For example, in Gmail:
+<ol>
+	<li>Go to top right corner and click "Settings"</li>
+	<li>Under "General Settings" &gt; "Browser Connection, select "Always use https"</li>
+</ol>
+<h2><span id="Sever_Configuration" class="mw-headline">Sever Configuration</span></h2>
+<h3>SSL Encryption</h3>
+You will be prompted to create a self-signed certificate during installation. If possible, we recommend purchasing a certificate signed by a Certificate Authority and installing on your server. Resources are available online for obtaining a signed certificate.
+
+Reference: <a title="https://help.ubuntu.com/14.04/serverguide/certificates-and-security.html" href="https://help.ubuntu.com/14.04/serverguide/certificates-and-security.html">https://help.ubuntu.com/14.04/serverguide/certificates-and-security.html</a>
+<h3><span id="Testing_the_Connection" class="mw-headline">Testing the Secure Connection</span></h3>
+Finally, open a browser and test that the following can be reached.
+<pre> <a class="external free" href="https://%24host/mds/" rel="nofollow">https://$HOST/mds/</a>
+ <a class="external free" href="https://%24host/openmrs/" rel="nofollow">https://$HOST/openmrs/</a> 
+</pre>
+<i>Note:</i> If you used a self signed certificate you will likely get a warning
+<h3><span id="Firewall_Configuration" class="mw-headline">Firewall Configuration</span></h3>
+The simplest mechanism for configuring the firewall on the recommended Ubuntu system is to use the <b>ufw</b> tool. The following commands will block all non local traffic except to the secure ports:
+<pre> sudo ufw enable 
+ sudo ufw allow 443
+ sudo ufw allow proto tcp from 192.168.0.0/24 to any port 8081
+</pre>
+<i>Note</i> You will need to <b>allow</b> any other ports used by other services you will be running. For more information, consult the <a class="external text" title="https://help.ubuntu.com/14.04/serverguide/C/firewall.html#firewall-ufw" href="https://help.ubuntu.com/14.04/serverguide/C/firewall.html#firewall-ufw" rel="nofollow">firewall</a> portion of the Ubuntu server guide.
+<h3><span id="Client_Compatibility_and_Configuration" class="mw-headline">Client Compatibility and Configuration</span></h3>
+For the Android client app to be compatible with these server changes, open the  application and verify in the <strong>Settings </strong>that the <b>Secure Transmission</b> checkbox is checked from <b>Menu --&gt; Settings --&gt; Sana Network</b>
+
+<a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Client_settings.png"><img src="http://sana.mit.edu/wiki/images/5/5f/Client_settings.png" alt="Client settings.png" width="269" height="480" /></a> <a class="image" href="http://sana.mit.edu/wiki/index.php?title=File:Network_settings.png"><img src="http://sana.mit.edu/wiki/images/2/25/Network_settings.png" alt="Network settings.png" width="269" height="480" /></a>
+<h4><span id="Resources" class="mw-headline">Resources</span></h4>
+HTTPS Configuration on Apache Server <a class="external free" href="https://help.ubuntu.com/12.04/serverguide/C/httpd.html" rel="nofollow">https://help.ubuntu.com/14.04/serverguide/C/httpd.html</a>
+
+Certificates <a class="external free" href="https://help.ubuntu.com/12.04/serverguide/C/certificates-and-security.html" rel="nofollow">https://help.ubuntu.com/14.04/serverguide/C/certificates-and-security.html</a>
+
+Firewall <a class="external free" href="https://help.ubuntu.com/12.04/serverguide/C/firewall.html#firewall-ufw" rel="nofollow">https://help.ubuntu.com/14.04/serverguide/C/firewall.html#firewall-ufw</a> firewall
+
+Setting up Tomcat on HTTPS using Apache <a class="external free" href="http://www.ctrip.ufl.edu/howto-install-mod_proxy_http-apache2-tomcat6-debian-lenny" rel="nofollow">http://www.ctrip.ufl.edu/howto-install-mod_proxy_http-apache2-tomcat6-debian-lenny</a>
+<h5><span id="Resources_2" class="mw-headline">Resources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a title="Edit section: Resources" href="http://sana.mit.edu/wiki/index.php?title=Security&amp;action=edit&amp;section=19">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+Password Protecting Your Pages with Htaccess <a class="external free" href="http://www.elated.com/articles/password-protecting-your-pages-with-htaccess/" rel="nofollow">http://www.elated.com/articles/password-protecting-your-pages-with-htaccess/</a>
+<h2><span id="Authentication" class="mw-headline">Authentication</span></h2>
+<h4><span id="Healthcare_Worker_Authentication" class="mw-headline">Healthcare Worker Authentication</span></h4>
+As mentioned above, we need a mechanism for authenticating the healthcare worker, so that false information is not uploaded to the Sana queue and wasting the time of specialists reviewing the cases. If an adversary got their hands on a phone and uploaded many, many cases, they could launch a Denial of Service attack such that other healthcare workers and patients who actually need medical expertise would not be able to receive it in a timely manner.
+
+Currently Android phones do not have support for fingerprint recognition or other biometrics (except for handwritten signatures on the touchscreen), but you can look into other methods of authentication such as existing stand-alone biometric authentication devices, smart cards, voice recognition software, and etc...
+<h4><span id="Patient_Authentication" class="mw-headline">Patient Authentication</span></h4>
+It is crucial to be able to link a patient with the right electronic health record. For a difficult case, a specialist may scan through the history of a patient in the medical record system to look for indications to help in diagnosis. Hence, we never want to upload data for a patient into the record of another patient.
+
+Unfortunately, there is a high error rate for healthcare providers typing in patient medical record numbers incorrectly into a computer. In addition, with a small keyboard on the phone, a person is more likely to hit the wrong key unknowingly and the number of data entry errors will increase. Hence, we strongly recommend the use of the barcode reader that has been integrated into Sana for patient authentication (instead of simply manually typing in the patient's ID number).
+
+There should be a systematic method for issuing ID card to patients with these medical record numbers. With an organized system, we can ensure that no two patients have the same ID number (otherwise their records would be mixed when data is uploaded). We recommend building off the OpenMRS ID card module already available in OpenMRS and customizing it to fit your workflow.
+<h4><span id="Specialist_Authentication" class="mw-headline">Specialist Authentication</span></h4>
+Since the specialist will be making the diagnosis for the patient, it is very important that this person is identified properly. Because they will be interacting with Sana through the OpenMRS interface, they should at the minimum have their own username/password. (In case you're interested, passwords in OpenMRS are not stored in plaintext, the hash of the password is stored instead for security reasons. Passwords in OpenMRS are also required to be a certain length, with upper and lowercase letters and symbols, so the password should be difficult to guess. As a pointer, do not use words that appear in the dictionary for your password). The OpenMRS admin account should not be given out to doctors. The admin account has the ability to create/delete users, change their passwords, etc... so this is not something that the medical specialists should have access to.
+
+If you have time and resources available, you can consider integrating biometrics or other types of authentication to OpenMRS for access to the Sana queue of patient cases (i.e. requiring fingerprint for system entry, a retina scan, or barcode scanning). Sana currently does not have support for these features yet, but if you do make these changes, we welcome you to share these changes as our other partners could also make use of this.
+<h2><span id="Physical_Security" class="mw-headline">Physical Security</span></h2>
+It is important to take measures to create a physically secure environment for the hardware devices involved in the telemedicine system. Physical security means protecting the site from natural disasters, theft, intrusion, accidents, and vandalism (NCES). The most sophisticated infrastructure could be put in place to protect the data but if the server is physically easily available to outside hackers, then there isn’t much protection because the system is as strong as its “weakest” component. To start off, the server should be located in a place that is locked away in a data center or location where it cannot be tampered with. Depending on how critical the data is and the financial resources available, one may also consider installing locks, window bars, security cameras, alarms, and having security guards to protect the server.
+
+In Sana, because the specialist is no longer tied to a specific location, we can’t be sure about what environment the specialist will be located in. He could be answering referral inquiries in a very public place such as on a public transit vehicle or in his own home with family members walking around. To prevent over-the-shoulder attacks, it can also be recommended that the specialist has a computer screen cover. Alternatively, a security policy could be enforced that restricts the location of the review process to the hospital computer or home office.
+
+Physical security can be designed by first doing a risk assessment of the perimeter where telemedicine transactions will be performed. Then steps should be taken to address each of those physical threats. Examples include storing away laptops or other expensive equipment, shredding confidential documents no longer needed, labeling equipment as belonging to the organization, and separating general equipment from those with sensitive information. There should also be a protocol to follow in case an emergency does happen (i.e. fire or intruder).
+<h2><span id="Assessment_of_Site-Specific_Potential_Security_Weaknesses" class="mw-headline">Assessment of Site-Specific Potential Security Weaknesses</span></h2>
+The clinical application that Sana will be used in will involve a slightly different workflow at each site. Hence, it is important to do a site-specific assessment of the workflow to identify potential loopholes for adversaries to access and tamper with the patient data. Then appropriate security procedures can be put in place to address those issues.
+<h2><span id="Training" class="mw-headline">Training</span></h2>
+It's appropriate to hold training sessions to teach users to be conscious of the patient data privacy laws local to your country and how they can perform safe practices to ensure the system is secure.
+<h2><span id="Internal_Audits_of_the_Security_Procedure" class="mw-headline">Internal Audits of the Security Procedure</span></h2>
+Like any policy, it is useless unless enforced. Hence, random audits should be performed to check that the system is properly secured according to the policy and protocol decided upon. Monitoring and evaluating the actual practices of the healthcare workers and specialists involved can provide useful insight into what improvements or changes to the policy are needed, and will be a continual feedback loop. Through quality assurance, we can gain confidence that the patients are receiving the same standard of care as in face-to-face consultations.
+<h2><span id="References" class="mw-headline">References</span></h2>
+<ul>
+	<li>For more information on HIPAA Security Rule, visit the U.S. Department of Health and Human Services website:<a class="external free" href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/index.html" rel="nofollow">http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/index.html</a></li>
+</ul>

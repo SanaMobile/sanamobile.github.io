@@ -1,0 +1,48 @@
+<h3>Overview</h3>
+The source code for the Sana Android mobile client is a gradle based project intended to be built using Android Studio. Android studio has a number of features that developers should find useful when working with Android based projects.
+<h3>System Requirements</h3>
+<ul>
+	<li><a title="Android Studio" href="http://developer.android.com/sdk/index.html">Android Studio</a> Additional prerequisites are required for installing Android Studio. Please see the <a title="System Rerquirements" href="http://developer.android.com/sdk/index.html#Requirements">System Requirements</a> for Android Studio for your platform</li>
+	<li>The Android support libraries available for installation through the SDK manager.</li>
+	<li>Emulator or Hardware device connected via USB with API level 7 or higher.</li>
+</ul>
+Notes: If you do not have a hardware device available, additional instructions for creating an emulator are available on the Android Developer Site's <a title="Managing Virtual Devices" href="http://developer.android.com/tools/devices/index.html">Managing Virtual Devices</a> page.
+
+Hint: If your workstation includes an Intel processor with hardware virtualization support and you are developing on Windows, you will find the emulator runs significantly faster if you also install the  <a title="Intel Hardware Accelerated Execution Manager" href="http://developer.android.com/tools/devices/emulator.html#accel-vm"><b>Intel Hardware Accelerated Execution Manager </b></a> available through the SDK manager.
+<h3>Source Code</h3>
+Source code for the Android based mobile client is available by cloning the sana.mobile repository.
+
+<code> git clone https://github.com/SanaMobile/sana.mobile.git </code>
+
+We highly recommend creating a Github account and forking the repository in lieu of directly cloning the repository so that any changes that you may make may be more easily contributed to the platform via a pull request.
+<h3>Import, Build, and Run instructions</h3>
+The recommended method for building the code is to use Android Studio. The following steps should allow you to obtain, build, and run the code with minimal difficulty.
+<ol>
+	<li>Open Android studio.</li>
+	<li>Import project from Version control.<a href="http://sana.mit.edu/mobile/wp-content/uploads/sites/3/2015/01/android_studio.png"><img class="aligncenter size-medium wp-image-128" src="http://sana.mit.edu/mobile/wp-content/uploads/sites/3/2015/01/android_studio-300x226.png" alt="Android Studio" width="300" height="226" /></a></li>
+	<li>Enter either the url for the official Sana repository listed above or a fork under your own account if you created one.
+<a href="http://sana.mit.edu/mobile/wp-content/uploads/sites/3/2015/01/as_vcs.png"><img class="aligncenter size-medium wp-image-130" src="http://sana.mit.edu/mobile/wp-content/uploads/sites/3/2015/01/as_vcs-300x226.png" alt="VCS" width="300" height="226" /></a>
+<a href="http://sana.mit.edu/mobile/wp-content/uploads/sites/3/2015/01/as_github.png"><img class="aligncenter size-medium wp-image-129" src="http://sana.mit.edu/mobile/wp-content/uploads/sites/3/2015/01/as_github-300x76.png" alt="Github Import" width="300" height="76" /></a></li>
+	<li>Select the defaults presented on the import page.</li>
+	<li>When the gradle project has finished importing and building, select the app module and press run.</li>
+	<li>When the app starts you will be presented with an authentication screen. The resources in the source code includes a flag that loads a set of default credentials which will successfully authenticate against the Sana demo server.</li>
+</ol>
+For additional details on working with Android Studio, including testing and debugging, please consult the <a title="Workflow" href="http://developer.android.com/tools/workflow/index.html">Workflow</a> page on the Android Developer site.
+<h3><b>Code Structure</b></h3>
+The gradle based project is split into three distinct modules.
+<ol>
+	<li><strong>api</strong> - A pure java library that includes the POJO's, network functions, and utilities for processing data.</li>
+	<li><strong>api-android</strong> - Android implementation and wrappers around the pure Java api</li>
+	<li><strong>app</strong> - The code and resources for the Android based application.</li>
+</ol>
+Visually you should see something similar to the following when looking at the project in Android Studio.
+
+<a href="http://sana.mit.edu/mobile/wp-content/uploads/sites/3/2015/01/as_project.png"><img class="aligncenter size-medium wp-image-127" src="http://sana.mit.edu/mobile/wp-content/uploads/sites/3/2015/01/as_project-300x246.png" alt="Project" width="300" height="246" /></a>
+
+The motivation for splitting the project into the three discrete modules was to allow developers who may be interested wished to implement an alternate frontend, develop a client on another platform, or otherwise may find some portion of the libraries useful to do so more easily. The following sections contain additional details and features of each project that should assist developers working with the code.
+<h4>api Module</h4>
+The <strong>api</strong> module provides a pure Java library that contains the POJO's that correlate with the data model used by the client, basic network code for communicating with the Sana middleware, and a number of utility functions.
+<h4>api-android Module</h4>
+The <strong>api-android </strong>module contains source code for non-application classes and interface to work with the Sana mobile code including communication with MDS.
+<h4>app</h4>
+The <strong> app </strong>module contains the source code for the front end visual components and classes specific to the application.

@@ -1,0 +1,92 @@
+<h3>Overview</h3>
+This page contains information for developers in the HST.936 course who are working on group based programming projects. For projects based on the core Sana components, please see the <a href="http://sana.kidk.net/mobile/documentation/developers/hst-936/#core" title="Core Projects">Core</a> section of this page. For projects not based on the Sana core components, please see the <a href="http://sana.kidk.net/mobile/documentation/developers/hst-936/#noncore" title="Alternative Code Projects">Alternative Code Projects</a> section. For additional information on working with Git and the Github site, please see the <a href="http://sana.kidk.net/mobile/documentation/developers/hst-936/#reference" title="Git Reference">Reference</a> section at the end of this page.
+
+<div id="core">
+<h3>Core Projects</h3>
+<h4>Workflow</h4>
+The basic workflow for working with the core component repositories is as follows.
+<ol>
+	<li>Individual Github acccount for each team member</li>
+	<li>Single fork of official Sana repository under one team members account</li>
+	<li>Add all of the team members as collaborators</li>	
+        <li>All team members should make contributions to the fork.</li>
+	<li>Add any documentation to the Github wiki of your fork</li>
+        <li>At the end of the course, submit a pull request to the Sana repository from your fork</li>
+</ol>
+<div id="core_instructions">
+<h4>Detailed Instructions for creating a fork</h4>
+<ol>
+	<li>Login to Github</li>
+	<li>Open the <a href="https://github.com/SanaMobile" title="Sana Mobile">Sana Github Site</a></li>
+	<li>Select the repository page of the component you are working on<p />
+<ul>
+	<li><a href="https://github.com/SanaMobile/sana.mobile">Android Client</a>
+<pre>https://github.com/SanaMobile/sana.mobile.git</pre>
+</li>
+	<li><a href="https://github.com/SanaMobile/sana.mds">MDS</a>
+<pre>https://github.com/SanaMobile/sana.mds.git</pre>
+</li>
+	<li><a href="https://github.com/SanaMobile/sana.openmrs">Encounter Queue Module</a>
+<pre>https://github.com/SanaMobile/sana.openmrs.git</pre>
+</li>
+</ul>
+</li>
+	<li>Create a fork of the repository.</li>
+	<li>Open the <strong>Collaborators</strong> tab of your new repository's <strong>Settings</strong></li>	
+        <li>Add each of your team members as a collaborator</li> 
+	<li>Clone the repository and checkout the <code>hst936</code> branch to your workstation either through the command line<p><pre>git clone https https://github.com/[Github username]/[Repository Path]</pre></p>or through Git integration of your IDE. <strong>Important</strong> Verify the branch with your mentor.</li>
+	<li>Each team member should edit, test, commit, and push any changes to the hst936 branch of the fork. Mentors will provide additional instructions on frequency of expected commits and any milestones.</li>
+	<li>At the end of the semester, create a pull request. This can be done ether through the command line or Github web interface.</li>
+</ol>
+
+Please see see the <a href="http://sana.kidk.net/mobile/documentation/developers/hst-936/#reference" title="Git Reference">Reference</a> section for more information on working with Git if you are not familiar with it.
+</div>
+
+<div id="style">
+<h4>Code Conventions</h4>
+The coding conventions for the Sana repositories in general follow standard best practices for Java and Python. To assist with making your changes adhere to the conventions as the original source, please import the following code formatting styles into your IDE.
+<ul>
+	<li><a href="http://h">Mobile Client Code Style for Android Studio</a></li>
+	<li><a href="http://h">MDS Code Style for Aptana Studio</a></li>
+	<li><a href="http://h">Encounter Queue Module Code Style</a></li>
+</ul>
+<h5>Instructions</h5>
+<ul>
+	<li>Android Studio:
+<pre>File -&gt; Import Settings</pre>
+and select the downloaded file.</li>
+	<li>Aptana Studio and Eclipse:
+<pre>Window -&gt; Preferences -&gt; Java -&gt; Code Style -&gt; Code Templates</pre>
+and Import the downloaded file.</li>
+</ul>
+</div>
+</div>
+
+<div id="non_core">
+<h3>Alternative Code Projects</h3>
+For code based projects not based on the core Sana platform components, please perform the following:
+
+<ol>
+	<li>Create a Github account if you do not have one</li>
+	<li>Create a private repository for the code using your Github account.</li>
+	<li>Add any other students who are working with you on the project as collaborators using their Github account info.</li>
+	<li>Add Github user <code>hst936</code> as a collaborator</li>
+	<li>Fill in the <a href="https://docs.google.com/forms/d/1ZcMeVCup6RswxoXrejs2C7_tlc3s7Db_BEi56P8CimE/viewform" title="HST.936 Project Github Information">HST.936 Project Github Information</a> form with your Github information and url of the repository.</li>
+
+</ol>
+
+Please see the <a href="http://sana.kidk.net/mobile/documentation/developers/hst-936/#reference" title="HST.936 Development Projects">Reference</a> section if you have additional questions on working with Git or Github.
+
+</div>
+
+<div id="reference">
+<h3>References</h3>
+For more information on working with git and GitHub, please consult the following references.
+<ul>
+	<li><a href="http://git-scm.com/doc">Official Git Documentation</a></li>
+	<li><a href="http://git-scm.com/book">Pro Git Book</a></li>
+	<li><a href="http://git-scm.com/doc/ext">Git Tutorials</a></li>
+	<li><a href="https://help.github.com/articles/fork-a-repo/">Github: Fork a Repo</a></li>
+	<li><a href="https://help.github.com/articles/using-pull-requests/">Github: Using pull requests</a></li>
+</ul>
+</div>
