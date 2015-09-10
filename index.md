@@ -34,8 +34,8 @@ The documentation is broken up into to guides, one targeted at end users
 of the platform, including both mobile and server administration, and 
 one targeted at developers.
 
-- [User Guide](/users/)
-- [Developer Guide](/developers/)
+- [User Guide](/users/index/)
+- [Developer Guide](/developers/index/)
 
 Keeping the documentation up-to-date is ongoing process. If you notice 
 any typo's or errors,  please contact us at 
