@@ -43,7 +43,7 @@ $(document).ready(function () {
   * 
   */
   $('.toggle-wrapper').each(function(){ 
-      $(this).hover(function(event){
+      $(this).click(function(event){
         event.preventDefault();
         $(this).children('.toggle').each(function(event){
           var toggle = $(this);
@@ -51,10 +51,7 @@ $(document).ready(function () {
             toggle.slideDownTransition();
           else
             toggle.slideUpTransition();
-          },function(event) {
-            toggle.slideUpTransition();
-          })
+        })
       })
   });
-
 });
