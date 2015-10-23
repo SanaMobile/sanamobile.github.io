@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Developer Guide
 label: Developer Guide
 ---
