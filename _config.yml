@@ -25,6 +25,11 @@ collections:
         root: /developers
         permalink: /developers/:path/
         output: true
+    contribute:
+        name: "Contribute"
+        root: /contribute
+        permalink: /contribute/:path/
+        output: true
 
 # Build settings
 markdown: kramdown

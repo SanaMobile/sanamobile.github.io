@@ -8,5 +8,22 @@ url: "http://0.0.0.0" # the base hostname & protocol for your site
 # twitter_username: ""
 github_username:  "sanamobile"
 
+collections:
+    users:
+        name: User Guide
+        root: /users
+        permalink: /users/:path/
+        output: true
+    developers:
+        name: "Developer Guide"
+        root: /developers
+        permalink: /developers/:path/
+        output: true
+    contribute:
+        name: "Contribute"
+        root: /contribute
+        permalink: /contribute/:path/
+        output: true
+
 # Build settings
 markdown: kramdown
