@@ -117,6 +117,9 @@ $sidebar-navigation-subpage-color: #cfcfcf;
   @include media-query($on-laptop) {
 
 }
+.sidebar-nav div.toggle-wrapper img {
+  max-width: 16px;
+}
 .sidebar-nav div.toggle-wrapper a {
   margin: 0;
   padding-top: 10px;
