@@ -44,6 +44,7 @@ $sidebar-navigation-subpage-color: #cfcfcf;
     height: 100%;
     background: #ffffff;
     padding-top: 0px;
+    top: 0px;
   }
 
   @include media-query($on-laptop) {

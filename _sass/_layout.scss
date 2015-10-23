@@ -2,13 +2,13 @@
  * Site header
  */
 .site-header {
-    background-color: $header-color;
-    border-top: 5px solid $grey-color-dark;
+    //background-color: $header-color;
+    //border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    // min-height: 56px;
     max-height: $header-spacing;
     // Positioning context for the mobile navigation icon
-    position: fixed;
+    //position: fixed;
     width: 100%;
 } 
 
@@ -171,7 +171,7 @@
  * Page content
  */
 .page-content {
-    padding: 128px 0;
+    padding: 16px 0;
     @include media-query($on-palm) {
         padding: $header-spacing 0;
     }
