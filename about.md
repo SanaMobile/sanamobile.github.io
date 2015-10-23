@@ -31,7 +31,7 @@ repo this file will exist already.
 your localhost. Open a terminal and from the top level directory of the 
 repositroy run:
 
-        jekyll serve --watch --host 0.0.0.0
+        jekyll serve --watch --config config-local.yml --host 0.0.0.0
 
     The pages should be accessible using any IP address assigned to the
     host.
