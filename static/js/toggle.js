@@ -44,7 +44,7 @@ $(document).ready(function () {
   */
   $('.toggle-wrapper').each(function(){ 
       $(this).click(function(event){
-        event.preventDefault();
+        //event.preventDefault();
         $(this).children('.toggle').each(function(event){
           var toggle = $(this);
           if (toggle.hasClass("height-transition-hidden"))

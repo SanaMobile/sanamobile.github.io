@@ -119,6 +119,10 @@ $sidebar-navigation-subpage-color: #cfcfcf;
 }
 .sidebar-nav div.toggle-wrapper img {
   max-width: 16px;
+  vertical-align: top;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 0px;
 }
 .sidebar-nav div.toggle-wrapper a {
   margin: 0;
