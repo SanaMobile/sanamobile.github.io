@@ -155,7 +155,10 @@ $sidebar-navigation-subpage-color: #cfcfcf;
 .sidebar-nav div.toggle-wrapper div.toggle a:hover {
   color: #05bed5;
 }
-
+.sidebar-nav div.section-links{
+  background-color: #efefef;
+  height: 100%;
+}
 .sidebar-title {
   margin: 0;
   padding: 20px;
