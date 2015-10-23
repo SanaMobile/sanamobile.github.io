@@ -19,7 +19,11 @@ and use the following template for your message:
 The information above will help us when discussing projects. If you are
 uncertain as to what you would like to work or are interested in working
 on several items, your background will help us guide you to a project that
-is appropriate based on your skills.  
+is appropriate based on your skills.
+
+You should also start by going through the general [Get Involved](/contribute/index/)
+page section for [Developers](/contribute/index/#developers) as well as
+the documentation in the [Developer Guide](/developers/index/).
     
 ## Slack
 To help us stay organized and especially answer your questions, we like
