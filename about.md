@@ -31,7 +31,7 @@ repo this file will exist already.
 your localhost. Open a terminal and from the top level directory of the 
 repositroy run:
 
-        jekyll serve --watch --config config-local.yml --host 0.0.0.0
+        jekyll serve --watch --config _config-local.yml --host 0.0.0.0
 
     The pages should be accessible using any IP address assigned to the
     host.
@@ -55,11 +55,6 @@ the 2.0 versions.
     ln -sf /usr/bin/ruby2.0 /usr/bin/ruby
     ln -sf /usr/bin/gem2.0 /usr/bin/gem
 
-### Updating submodules
-After you have cloned this repository, you should peridodically run
-
-    git submodule foreach git pull origin gh-pages
-    git submodule update --init
 
 ### Install Reference.
 [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/)
