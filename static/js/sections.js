@@ -6,7 +6,7 @@ $(document).ready(function () {
     var sectionBlock = $('#section-links');
     $("h1").each(function(){
         var link = '#' + $(this).attr('id');
-        var label = $(this).attr('id').toProperCase();
+        var label = $(this).attr('id').replace(/-/g,' ').toProperCase();
         var htm = "<a class='page-link' href='" + link + "'>" + label + "</a>";
         links += htm;
     });
