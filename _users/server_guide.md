@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Sever Guide
-label: server Guide
+title: Server Guide
+label: Server Guide
 collection: users
 ---
 # Server Guide
