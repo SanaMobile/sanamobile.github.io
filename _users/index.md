@@ -21,7 +21,7 @@ for full details on installation and use of the Sana mobile client.
 
 ### Quick Links
 
-- [Defining Custom Procedures]({{ site.baseurl }}/users/mobile/procedures/)
+- [Defining Custom Procedures]({{ site.baseurl }}/users/procedures/)
 
 
 ## Server Administration
@@ -30,10 +30,10 @@ details on installation and use of the server components.
 
 ### Quick links
 
-- [MDS Configuration]({{ site.baseurl }}/users/admin/mds/)
-- [OpenMRS Configuration]({{ site.baseurl }}/users/admin/openmrs/)
-- [Security](/users/admin/security/)
-- [Troubleshooting](/users/admin/troubleshooting/)
+- [MDS Configuration]({{ site.baseurl }}/users/mds_guide/)
+- [OpenMRS Configuration]({{ site.baseurl }}/users/openmrs_guide/)
+- [Security](/users/security_guide/)
+- [Troubleshooting](/users/troubleshooting/)
 
 Developers should consult the [Developer Guide](/developers/) for 
 technical information.
