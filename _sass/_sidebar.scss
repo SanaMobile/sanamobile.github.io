@@ -82,7 +82,8 @@ $sidebar-navigation-subpage-color: #cfcfcf;
     .page-link {
       display: block;
       padding: 5px 10px;
-    } 
+      width: 100%;
+    }
 
     .trigger {
         clear: both;
@@ -106,6 +107,7 @@ $sidebar-navigation-subpage-color: #cfcfcf;
 }
 
 .sidebar-nav div.toggle-wrapper {
+  width: 100%;
   margin: 0;
   padding: 0;
   display:  block;
@@ -130,6 +132,7 @@ $sidebar-navigation-subpage-color: #cfcfcf;
   padding-left: 15px;
   display:  block;
   font-size: 0.9em;
+  width: 100%
 }
 .sidebar-nav div.toggle-wrapper a.toggle-trigger {
   font-weight: 600;
