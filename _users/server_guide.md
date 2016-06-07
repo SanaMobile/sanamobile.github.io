@@ -12,8 +12,8 @@ the Ubuntu 14.04 LTS packages provided by Sana. The Sana packages will
 install any prerequisite software on the server. Sana does not provide
 support for installation of server components on other linux
 distributions. If you are interested in doing so, please consult the 
-[Manual Install]() page for a complete list of prerequisites and 
-instructions.
+[Manual Install]({{ site.baseurl }}/users/manual_install/) page for a 
+complete list of prerequisites and instructions.
 
 ### Package Installation procedure
 
