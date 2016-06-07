@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sever Guide-Manual Installation
+title: Manual Installation
 label: Manual Install
 collection: users
 ---
