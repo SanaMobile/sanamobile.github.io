@@ -25,7 +25,7 @@ for full details on installation and use of the Sana mobile client.
 
 
 ## Server Administration
-Please consult the [Server Admin Guide]({{ site.baseurl }}/users/server/) for full 
+Please consult the [Server Admin Guide]({{ site.baseurl }}/users/server_guide/) for full 
 details on installation and use of the server components.
 
 ### Quick links
