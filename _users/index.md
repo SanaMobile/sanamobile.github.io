@@ -9,10 +9,10 @@ information on specific topics, please consult the information in the
 guides or at the quick links below.
 
 
-[Installation]({{ site.baseurl }}/users/installation/)
+## Installation
 
 - [Mobile Client]({{ site.baseurl }}/users/mobile_user_guide/#installation)
-- [Server components]({{ site.baseurl }}/users/server/)
+- [Server components]({{ site.baseurl }}/users/server_guide/#installation)
 
 ## Mobile Client
 
