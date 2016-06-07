@@ -4,7 +4,7 @@ String.prototype.toProperCase = function () {
 $(document).ready(function () {
     var links = "";
     var sectionBlock = $('#section-links');
-    $("h1").each(function(){
+    $("h2").each(function(){
         var link = '#' + $(this).attr('id');
         var label = $(this).attr('id').replace(/-/g,' ').toProperCase();
         var htm = "<a class='page-link' href='" + link + "'>" + label + "</a>";
