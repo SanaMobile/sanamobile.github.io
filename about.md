@@ -3,15 +3,16 @@ layout: page
 title: About
 permalink: /about/
 ---
+# Github Pages Developement Environment
+This page contains instructions for setting up the development environment
+for this Github pagesSource code for the Sana documentation site
 
-This is the Sana documentation site. Source code for the site is available at
-[github.com/SanaMobile/sanamobile.github.io](https://github.com/SanaMobile/sanamobile.github.io)
+## Source Code
+Clone the repository
 
-## Install Instructions for build Environment
+    git clone https://github.com/SanaMobile/sanamobile.github.io
 
-Instructions for replicating Github pages environment
-
-### Installation
+## Build Environment
 
 1. Install ruby 2.0.0 and install bundler as a gem.
 
@@ -42,7 +43,7 @@ repositroy run:
 
     The ```_config.yml``` file is used by Github pages when deployed.
 
-### Ubuntu Installation Notes
+## Ubuntu Installation Notes
 Install the following packages.
     
     ruby2.0
@@ -56,7 +57,7 @@ the 2.0 versions.
     ln -sf /usr/bin/gem2.0 /usr/bin/gem
 
 
-### Install Reference.
+## Reference.
 [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/)
 
 [Jekyll](http://jekyllrb.com/)
