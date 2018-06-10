@@ -5,7 +5,7 @@ label: Developer Guide
 ---
 # Developer Guide
 This document contains information for getting started with developing
-the components of the Sana platform. Additional information on confguring
+the components of the Sana platform. Additional information on configuring
 the components when installed can be found in the [User Guide](/users/)
 
 ## Source Code
@@ -43,7 +43,7 @@ following references.
 ### License
 All Sana software products are available under a new BSD open-source license
 to increase availability and encourage community contribution. Please see the
-[License](/license/) page for thefull text.
+[License](/license/) page for the full text.
 
 ## Android Mobile Client
 The source code for the Sana Android mobile client is a gradle based project

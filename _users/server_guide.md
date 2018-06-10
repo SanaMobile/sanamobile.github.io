@@ -30,7 +30,7 @@ complete list of prerequisites and instructions.
 
         sudo apt-get install sana-mds
 
-3. Follow the prompts to configure the Sana middlware, MDS
+3. Follow the prompts to configure the Sana middleware, MDS
 4. Open a web browser to your host-e.g. ```https://localhost/openmrs```
 to initialize and configure OpenMRS.
  

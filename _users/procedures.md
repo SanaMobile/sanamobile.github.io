@@ -22,13 +22,13 @@ represented as child Element nodes for each Page. Additional metadata
 representing context, visual hints, constraints, and other information
 relevant to the prompt as XML attributes. Each Page may also contain simple,
 or compound, conditional statements that applies to any child Element nodes.
-The document structure, without the full XML syntax, is illustrrated below
+The document structure, without the full XML syntax, is illustrated below
 
     
     Procedure ...metadata
         Page
             [Optional] 
-                Conditional Statement ...simple or componund
+                Conditional Statement ...simple or compound
             Element ...metadata
             [Optional]
               ... additional Element(s)
@@ -1095,7 +1095,7 @@ external application.
 <td>mimeType</td>
 <td>String</td>
 <td>No</td>
-<td>The type of data collected. This <em>type</em> implies that the <em>mimeType</em> value is <em>text/plain</em>. Including a value will be meaningless since it will be overriden with <em>text/plain</em></td>
+<td>The type of data collected. This <em>type</em> implies that the <em>mimeType</em> value is <em>text/plain</em>. Including a value will be meaningless since it will be overridden with <em>text/plain</em></td>
 </tr>
 </tbody>
 </table>

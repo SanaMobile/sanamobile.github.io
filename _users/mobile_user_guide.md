@@ -40,7 +40,7 @@ application on and an internet connection, either mobile or WiFi.
 
         http://demo.sana.csail.mit.edu/downloads/android/sana-current.apk```
 
-    You should be provided the url by an adminstrator or others who provide 
+    You should be provided the url by an administrator or others who provide 
     support for your deployment if you are not a developer and did not 
     compile the client directly.
 
