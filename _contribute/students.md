@@ -38,7 +38,7 @@ For all student projects that are selected, we will provide recognition
 of your contribution on the official [Sana website](http://sana.mit.edu).
 In addition, you will have a record of your work recorded in your Github
 commits. Note: we are rebuilding the site so don't be alarmed if you can't
-find the student contributions page. It will be up shotly.
+find the student contributions page. It will be up shortly.
 
 If you are interested in course credit, we do not provide course credit 
 through MIT and we can't promise you will be available through your 

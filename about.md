@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-# Github Pages Developement Environment
+# Github Pages Development Environment
 This page contains instructions for setting up the development environment
 for this Github pagesSource code for the Sana documentation site
 
@@ -30,7 +30,7 @@ repo this file will exist already.
 
 4. Serve Pages Locally. You should now be able to serve the files on 
 your localhost. Open a terminal and from the top level directory of the 
-repositroy run:
+repository run:
 
         jekyll serve --watch --config _config-local.yml --host 0.0.0.0
 

@@ -4,7 +4,7 @@ title: Troubleshooting
 label: Troubleshooting
 collection: users
 ---
-# Toubleshooting
+# Troubleshooting
 
 ## Client
 

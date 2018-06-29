@@ -5,7 +5,7 @@ label: Manual Install
 collection: users
 ---
 # Server Guide-Manual Installation
-This file contains intructions for installing a new instance.
+This file contains instructions for installing a new instance.
 
 ## Operating System 
 Ubuntu 14.04 LTS is officially supported.
@@ -13,7 +13,7 @@ Ubuntu 14.04 LTS is officially supported.
 ## OS Packages and configuration
 Everything as root(sudo):
 1.  Meta Packages. Use ```tasksel``` for meta packages. This will 
-    install a number of required packages and their dependiencies. In
+    install a number of required packages and their dependencies. In
     the ```tasksel```
        (Select Lamp Stack and Tomcat and press Enter)
 2.  Individual packages Use the Advanced Package Tool to install the 
